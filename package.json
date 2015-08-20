@@ -1,0 +1,26 @@
+{
+  "author": "Karl Bishop",
+  "bin": {
+    "mfpx": "mfpx"
+  },
+  "bugs": {
+    "url": "https://github.com/kfbishop-us/mfplauncher/issues"
+  },
+  "dependencies": {
+    "chmodr": "^0.1.1",
+    "rimraf": "^2.3.4",
+    "unzip": "^0.1.11"
+  },
+  "description": "Simple launcher for IBM MobileFirst Platform Command Line Interface (CLI)",
+  "homepage": "https://github.com/kfbishop-us/mfplauncher",
+  "license": "MIT",
+  "name": "mfplauncher",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kfbishop-us/mfplauncher.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
