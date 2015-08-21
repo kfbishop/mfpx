@@ -1,0 +1,7 @@
+#-- Excludes at top level tree level
+node_modules/**/*
+typings/**/*
+installers/**/*
+
+#-- Explicit includes, overriding ubove
+!node_modules/mfpx-*/**/*
