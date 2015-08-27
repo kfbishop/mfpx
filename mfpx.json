@@ -1,0 +1,32 @@
+{
+  "mfp_version": "7.2-dev",
+  "installers_dir": "/Users/kfbishop/dev/mfpx/installers",
+  "app_home": "/Users/kfbishop/dev/mfp/apps",
+  "manage_app_home": false,
+  "mfp_versions": {
+    "7.2-dev": {
+      "download_url": "http://<internal_system>/productionBuilds-current/LATEST-RELEASE/",
+      "install_dir": "/Applications/IBM/MobileFirst-CLI-7.2-dev",
+      "java_home": "/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home",
+      "server_port": "10080"
+    },
+    "7.1": {
+      "download_url": "http://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_7.1.0.zip",
+      "install_dir": "/Applications/IBM/MobileFirst-CLI-7.1",
+      "java_home": "/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home",
+      "server_port": "10080"
+    },
+    "7.0": {
+      "download_url": "http://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_7.0.0.zip",
+      "install_dir": "/Applications/IBM/MobileFirst-CLI-7.0",
+      "java_home": "/Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home",
+      "server_port": "10080"
+    },
+    "6.3": {
+      "download_url": "http://public.dhe.ibm.com/ibmdl/export/pub/software/products/en/MobileFirstPlatform/mobilefirst_cli_installer_6.3.0.zip",
+      "install_dir": "/Applications/IBM/MobileFirst-CLI-6.3",
+      "java_home": "/Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home",
+      "server_port": "10080"
+    }
+  }
+}
