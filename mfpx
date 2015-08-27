@@ -12,6 +12,7 @@
 //-- GLOBALS
 var MFPX_VERSION  = "1.0.0",
 	mfpConfig        = require("mfpx-config"),
+	path			= require("path"),
 	cfg              = mfpConfig.config;
 
 //-----------------------------------------------------------------------
@@ -124,7 +125,7 @@ function setVersion( ver ) {
 		console.log("Manually edit '%s' to define requested version and re-run set command.", mfpConfig.cfgFile);
 		return -1;
 	}
-	if(! fs.existsSync( mfpInstance.cmd ) ) {
+	if(! fs.existsSync( path.resolve(mfpInstance.install_dir, "mfp") ) ) {
 		console.error("Error: Requested version '%s' does not appear to be installed.", ver);
 		console.log("Download and install this version to directory:",  mfpInstance.cmd);
 		console.log("Download URL: %s", mfpInstance.download_url);
