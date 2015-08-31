@@ -4,14 +4,17 @@ MFP eXtras (mfpx) is a simple launcher/utility for the MobileFirst Platform (MFP
 
 ## Primary Features
 
-The following features are currently provided by the CLI launcher:
-- Custom and manual installation
-- Multiple installed versions of the MFP CLI
-    - Including standard and iOS versions
-    - Easily switch between CLI versions, including custom workspaces for each version
-- Simple installation of latest nightly drivers (NEW!)
-- Set custom environment settings, such as Java runtime version
-- Force kill a mis-behaving MFP Server
+The following features are currently provided by the MFPX CLI:
+- Supports multiple installed versions of the MFP CLI
+  - Easily switch between CLI versions
+  - Enable custom workspaces and settings for each version
+  - Direct install all current MFP CLI versions
+  - Simple installation of latest pre-release nightly drivers (IBM Internal only)
+  - Set custom settings -- such as Java runtime -- per version
+- Local server smackdown
+  - Force kill a mis-behaving MFP Server
+  - Clean up local server issues
+- Custom export/import support for new MFP Cordova apps
 
 
 # Prerequisites
@@ -33,12 +36,20 @@ $ npm install -g <module>
 Obviously, you will also need at least one instance of the MFP CLI. You can install the latest released version [here](https://developer.ibm.com/mobilefirstplatform/install/#clui). For prior releases, see this [Stack Overflow post]() for options.  To obtain the latest pre-release nightly, simply run `mfp update`.
 
 
-# Install
+## Installation
 
-1. Uninstall any existing instance of the MFP.  This can be done by running the uninstall app (ie /Applications/IBM/MobileFirst-CLI/uninstall/Uninstall), and follow the prompts
-    - Note: The uninstaller is bad about cleaning up the "/etc/profile" and "/etc/zprofile" files.  Manually edit these files (as root) and remove all MFP related entries.
+1. Install the mfpx runtime and dependencies:
 
-1. Perform a manual install at least one instance of the MFP CLI. See the following blog post for assistance.
+  ```$ npm install -g mfpx```
+
+  Note: You may need to use `sudo` for osx/linux systems.
+
+2. Edit your `~/.profile` (or similar) and add the following alias.  
+
+  ```alias mfp="mfpx"```
+  
+  The GUI installers (hopefully goinf away soon!) will still add the real `mfp` command to your PATH, but aliases are interpreted before PATH entries.
+   
 
 
 # Commands
@@ -48,7 +59,7 @@ The following commands are available as part of this mfp luancher.
 Change the active version to be used when running 'mfp'. After running this command, all subsequent commands will be run using the defined version, and the applied to the app in the current APP_HOME directory.
 
 ```c
-> mfp set <M.m>
+$ mfp set <M.m>
 ```
 
 Example: `mfp set 7.1-ios`

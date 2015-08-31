@@ -69,14 +69,6 @@ function launch() {
 			mod.install( args );
 			break;
 
-		case "update":
-			console.error("Needs to be re-written, until then -- non soup for you!");
-			return -1;
-			mod = require("mfpx-update");
-			// second arg indicates ios version
-			mod.getLatestBuild( (args[1] ? true : false) );
-			break;
-
 		case "-?":
 			mod = require("mfpx-help");
 			mod( args );
