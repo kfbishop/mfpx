@@ -62,30 +62,33 @@ Change the active version to be used when running 'mfp'. After running this comm
 $ mfp set <M.m>
 ```
 
-Example: `mfp set 7.1-ios`
+Example: `mfp set 7.1`
 
 It is assumed that you have already installed the target version. In the example above, the ios specific version of mfp is requested. Normally, you might just want to specify `mfp set 7.1`.
 
 
-## Update latest version of mfp
+## Install a version of mfp, or dev driver (IBM internal only)
 
 Updates the latest pre-release version of the cLI. This command is only available to IBM internal users. Depending on your connections, this command can take take a while to complete.
 
 ```c
-> mfp update
+> mfp install <M.m>[-dev]
 ```
 
 At the time of this document, version 7.1 is in progress, and will be downloaded and configured. Obviously, as a work in progress, this version may fail spectacularly. Be aware of that its not released or tested!
+
+Special entries in the 'mfp_version' config map that end with "-dev", will dynamically search the IBM internal dev driver site for the latest available version, download and install it.  Contact the author or Tooling team in Raleigh for the proper URL.
 
 ## Kill server
 
 The Liberty server has a bad habit of getting confused.  We're working to resolve this issue but as of now its still an issue. Common catalysts are sing the Studio and CLI concurrently, or using different versions of the CLI. This command tries to be nice, and get aggressively forceful in ensuring the server is shut down.  We're adding this support to the product CLI, as it just a bad situation.
 
 ```c
-> mfp kill <port>
+> mfp kill
 ```
 
-You can provide a specific port to override the default '10080' port used by the MFP development server. The default port can be defined in the config value `DEFAULT_MFP_PORT`.
+The default port to kill is '10080', and is defined for each version in the .mfpx.json config file.
+
 
 ## Help (-?)
 
