@@ -1,6 +1,6 @@
 {
   "name": "mfpx",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Simple launcher and utilities for IBM MobileFirst Platform Command Line Interface (CLI)",
   "homepage": "https://github.com/kfbishop/mfpx",
   "author": "Karl Bishop, kfbishop@us.ibm.com",
