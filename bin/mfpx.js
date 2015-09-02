@@ -23,6 +23,7 @@ var cmds = {
 	"import"   : {"mod":"../lib/mfpx-export" , "func":"import"},
 	"set"      : {"mod":"../lib/mfpx-set"    , "func":"set"},
 	"kill"     : {"mod":"../lib/mfpx-server" , "func":"kill"},
+	"clean"    : {"mod":"../lib/mfpx-server" , "func":"clean"},
 	"install"  : {"mod":"../lib/mfpx-install", "func":"install"},
 	"-?"       : {"mod":"../lib/mfpx-help"   , "func":null},
 	"-v"       : {"mod":"../lib/mfpx-run"    , "func":null},
