@@ -48,12 +48,12 @@ Obviously, you will also need at least one instance of the MFP CLI. You can inst
 
   ```alias mfp="mfpx"```
   
-  The GUI installers (hopefully goinf away soon!) will still add the real `mfp` command to your PATH, but aliases are interpreted before PATH entries.
+  The GUI installers (hopefully going away soon!) will still add the real `mfp` command to your PATH, but aliases are interpreted before PATH entries.
    
 
 
 # Commands
-The following commands are available as part of this mfp luancher.
+The following commands are available as part of this mfp launcher:
 
 ## Change active version
 Change the active version to be used when running 'mfp'. After running this command, all subsequent commands will be run using the defined version, and the applied to the app in the current APP_HOME directory.
@@ -64,12 +64,12 @@ $ mfp set <M.m>
 
 Example: `mfp set 7.1`
 
-It is assumed that you have already installed the target version. In the example above, the ios specific version of mfp is requested. Normally, you might just want to specify `mfp set 7.1`.
+It is assumed that you have already installed the target version. In the example above, the iOS specific version of mfp is requested. Normally, you might just want to specify `mfp set 7.1`.
 
 
 ## Install a version of mfp, or dev driver (IBM internal only)
 
-Updates the latest pre-release version of the cLI. This command is only available to IBM internal users. Depending on your connections, this command can take take a while to complete.
+Updates the latest pre-release version of the CLI. This command is only available to IBM internal users. Depending on your connections, this command can take take a while to complete.
 
 ```c
 > mfp install <M.m>[-dev]
@@ -81,7 +81,7 @@ Special entries in the 'mfp_version' config map that end with "-dev", will dynam
 
 ## Kill server
 
-The Liberty server has a bad habit of getting confused.  We're working to resolve this issue but as of now its still an issue. Common catalysts are sing the Studio and CLI concurrently, or using different versions of the CLI. This command tries to be nice, and get aggressively forceful in ensuring the server is shut down.  We're adding this support to the product CLI, as it just a bad situation.
+The Liberty server has a bad habit of getting confused.  We're working to resolve this issue but as of now it's still an issue. Common catalysts are using the Studio and CLI concurrently, or using different versions of the CLI. This command tries to be nice, and get aggressively forceful in ensuring the server is shut down.  We're adding this support to the product CLI, as it just a bad situation.
 
 ```c
 > mfp kill
